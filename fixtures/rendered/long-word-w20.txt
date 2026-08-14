@@ -1,0 +1,9 @@
+┌──────┬───────────┐
+│ Key  │ Value     │
+├──────┼───────────┤
+│ long │ supercali │
+│ word │ fragilist │
+│      │ icexpiali │
+│      │ dociousis │
+│      │ h         │
+└──────┴───────────┘

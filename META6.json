@@ -1,18 +1,19 @@
 {
-  "auth" : "github:araraloren",
-  "authors" : "Loren",
+  "auth" : "github:Phylloscopus-collybita",
+  "authors" : "Loren; Mu",
   "build-depends" : [ ],
   "depends" : [
     "Terminal::ANSIColor",
     "Terminal::WCWidth",
     "Text::Tabs"
   ],
-  "description" : "Advanced table generate module for raku lang",
+  "description" : "Advanced table generate module for raku lang; includes Terminal::Table::Adaptive — width-adaptive tables that fit a terminal width exactly",
   "license" : "MIT",
   "name" : "Terminal::Table",
   "perl" : "6.c",
   "provides" : {
     "Terminal::Table" : "lib/Terminal/Table.rakumod",
+    "Terminal::Table::Adaptive" : "lib/Terminal/Table/Adaptive.rakumod",
     "Terminal::Table::Exception" : "lib/Terminal/Table/Exception.rakumod",
     "Terminal::Table::Frame" : "lib/Terminal/Table/Frame.rakumod",
     "Terminal::Table::Generator" : "lib/Terminal/Table/Generator.rakumod",
@@ -24,16 +25,21 @@
     "Terminal::Table::VisitorHelper" : "lib/Terminal/Table/VisitorHelper.rakumod"
   },
   "resources" : [ ],
-  "source-url" : "https://github.com/araraloren/raku-terminal-table.git",
+  "source-url" : "https://github.com/Phylloscopus-collybita/raku-terminal-table.git",
   "support" : {
-    "bugtracker" : "https://github.com.araraloren/raku-terminal-table/issues",
-    "source" : "https://github.com/araraloren/raku-terminal-table.git"
+    "bugtracker" : "https://github.com/Phylloscopus-collybita/raku-terminal-table/issues",
+    "source" : "https://github.com/Phylloscopus-collybita/raku-terminal-table.git"
   },
   "tags" : [
     "terminal",
     "table",
-    "text"
+    "text",
+    "adaptive",
+    "width",
+    "cjk"
   ],
-  "test-depends" : [ ],
+  "test-depends" : [
+    "JSON::Fast"
+  ],
   "version" : "0.1.1"
 }

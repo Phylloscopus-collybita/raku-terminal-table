@@ -17,6 +17,32 @@ table, and you can colour your table content. Also the module has common style p
 
 link:README.zh.adoc[中文帮助]
 
+== Terminal::Table::Adaptive
+
+This distribution also ships `Terminal::Table::Adaptive`, a width-adaptive
+table renderer: given a header, rows, and a *terminal width*, it computes
+column widths automatically — natural widths when everything fits,
+proportional shrink with floor-rounding when it doesn't — and wraps each
+cell to its column. Cells may contain ANSI SGR codes and wide/CJK
+characters; measurement uses `Terminal::WCWidth` (the fitting algorithm
+follows pi-tui's `renderTable`; provenance is documented in the module POD).
+
+* render-table(@header, @rows, $terminal-width, :&bold, :$raw, :$next-token-type)
++
+Render a table into lines that fit `$terminal-width` exactly.
+
+* to-terminal-table-widths(@header, @rows, $terminal-width, :$max-word-width = 30)
++
+Adapter for the classic `Terminal::Table` interface: returns per-column
+widths that fit the terminal, ready for the `@max-widths` parameter of
+`array-to-table` / `print-table`.
+
+* fit-columns(@natural, @min, $available), visible-width($text), wrap-cell($text, $width)
++
+Lower-level building blocks, all exported.
+
+Example: link:sample/adaptive-demo.raku[sample/adaptive-demo.raku].
+
 == Interface
 
 === High Level Interface
